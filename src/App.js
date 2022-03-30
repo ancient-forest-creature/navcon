@@ -1,17 +1,17 @@
 import './App.css';
 import React, {useState} from "react";
 import NameContext from "./components/Context";
+import Navbar from "./components/Navbar";
+import FormWrapper from "./components/FormWrapper"
 
 function App() {
   const [name, setName] = useState();
   return (
     <div className="App">
       <NameContext.Provider value={{name, setName}}>
-        <Wrapper>
-          <Navbar />
-          <FormWrapper />
-        </Wrapper>
-      </NameContext.Provider>
+        <Navbar />
+        <FormWrapper />
+       </NameContext.Provider>
     </div>
   );
 }
